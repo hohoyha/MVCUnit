@@ -5,13 +5,14 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
 
-    public GameObject followTarget;
+    public GameObject followTarget = null;
     private Vector3 targetPos;
     public float moveSpeed = 5;
     private static bool playerExists = false;
     // Use this for initialization
     void Start()
     {
+        /*
         if (!playerExists)
         {
             playerExists = true;
@@ -21,12 +22,15 @@ public class CameraController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        */
     }
 
     // Update is called once per frame
     void Update()
     {
-        return;
+        if (followTarget == null) return;
+
+        //return;
         Vector3 pos = followTarget.transform.position;
         targetPos = new Vector3(pos.x, pos.y, transform.position.z);
 

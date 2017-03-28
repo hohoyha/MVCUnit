@@ -18,6 +18,8 @@ public class GameStartup : App, IGameApp
 
     public override void Init(IRouter router, DiContainer container)
     {
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+        Screen.SetResolution(1280, 720, true);
       //  print("go Hello");
         router.GoTo(StartMenuPresenter.view);
         //router.GoTo(MenuPresenter2.view);

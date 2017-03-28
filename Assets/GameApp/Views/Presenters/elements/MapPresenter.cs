@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Karma;
-using System;
 using Karma.Metadata;
+using System;
 
 [Element(path)]
-public class MonsterPresenter : MVCPresenter {
+public class MapPresenter : MVCPresenter {
 
-    public const string path = "Monster";
+    public const string path = "Map";
+
     public override void OnPresenterDestroy()
     {
-
+        
     }
 
     // Use this for initialization

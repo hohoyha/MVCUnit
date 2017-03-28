@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using CnControls;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         myRigibody = GetComponent<Rigidbody2D>();
 
+        /*
         if (!playerExists)
         {
             playerExists = true;
@@ -33,13 +35,14 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        */
     }
 
     // Update is called once per frame
     void Update()
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        float h = CnInputManager.GetAxisRaw("Horizontal");
+        float v = CnInputManager.GetAxisRaw("Vertical");
 
         playerMoving = false;
 
